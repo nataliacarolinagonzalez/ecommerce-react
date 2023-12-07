@@ -13,6 +13,7 @@ import { RutaNoValida } from './componentes/RutaNoValida';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Footer } from './componentes/Footer';
+import { Carrousel } from './componentes/Carrousel';
 
 
 
@@ -28,6 +29,7 @@ function App() {
 
           <BrowserRouter>
             <Navbar />
+            <Carrousel/>
 
             <Routes>
               <Route index element={<Inicio titulo="Inicio" />} />
@@ -42,9 +44,9 @@ function App() {
               <Route path='*' element={<RutaNoValida />} />
             </Routes>
 
+            
             <Footer/>
           </BrowserRouter>
-          
         </div>
       </div>
     </div>
