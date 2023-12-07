@@ -1,0 +1,69 @@
+.Inicio hr {
+    background-color: #eee;
+}
+
+.inicio {
+    height: auto;
+    text-align: center;
+    padding: 25px;
+    padding-bottom: 150px;    
+}
+
+.inicio .cards-container {
+    display: flex;
+    
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+}
+
+.inicio section img {
+    width: 150px;
+    /* float: left; */
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.inicio section {
+    border: 1px dashed yellow;
+    width: 350px;
+    padding: 15px;
+    background-color:#943;
+    color: white;
+    margin: 25px;
+    border-radius: 15px;
+}
+
+.inicio section h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.inicio .section-cards-header h1 {
+    color: white;
+    margin-bottom: 40px;
+}
+
+.inicio .cards-container section p {
+    margin-bottom: 10px;
+}
+
+.inicio .precio {
+    color: pink;
+}
+
+.inicio section button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: gold;
+    color: brown;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    margin-bottom: 15px;
+}

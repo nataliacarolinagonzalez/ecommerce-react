@@ -1,0 +1,79 @@
+footer {
+    height: auto;
+   /*  background-color: #ec5151; */
+    width: 100vw;
+    color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+}
+footer #info-gral-footer{
+    display: flex;
+    justify-content: space-around;
+}
+footer #info-gral-footer .info, footer #info-gral-footer .contacto, footer #info-gral-footer .suscripcion{
+    margin: 1em;
+    padding: 0;
+    line-height: 1.3em;
+    font-size: 0.9em;
+}
+footer .copy{
+    text-align: center;
+    color: black;
+    margin-bottom: 1em;
+
+}
+footer #info-gral-footer .info h4, footer #info-gral-footer .contacto h4, footer #info-gral-footer .suscripcion h4, footer #info-gral-footer .redes h4 {
+    margin-bottom: 0.5em;
+    font-variant: small-caps;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+    font-family:'Alkatra', cursive;  
+}
+footer #info-gral-footer .info a, footer #info-gral-footer .contacto a {
+    text-decoration: none;
+    color: whitesmoke; 
+}
+footer #info-gral-footer .contacto li{
+    list-style-type: none;  
+}
+footer #info-gral-footer .info li {
+    list-style-type: '>  ';  
+}
+footer #info-gral-footer .info li::marker{
+    font-size: 0.6em;
+}
+footer #info-gral-footer .info a:hover{
+    text-decoration: underline;
+}
+footer #info-gral-footer .contacto img{
+    width: 1.3em;
+}
+footer #info-gral-footer .redes img{
+    width: 1.8em;
+}
+footer #info-gral-footer .redes {
+    margin-top: 1.8em;
+}
+.btn-whatsapp img{
+    width: 4.5em;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+footer #info-gral-footer .suscripcion input{
+    width: 50%;
+    border-radius: 0.2em;
+    padding: 0.3em;
+    height: 2.2em;
+    color: #0B3954;
+    outline: none;
+    font-size: 0.8em;
+    border: none;
+}
+footer #info-gral-footer .suscripcion input[type="submit"] {
+    width: auto;
+    height: 2.2em;
+    background-color: rgba(11, 57, 84, 1);
+    color: whitesmoke;
+}
