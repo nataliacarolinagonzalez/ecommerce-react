@@ -2,37 +2,39 @@ import './Carrousel.css'
 
 export const Carrousel = () =>{
     return (
+      <div className='alinear'>
+      <div id="promos">
+                <div className="uno">
+                    <h5> <span> 3 cuotas sin interés </span> con tarjetas bancarias. </h5>
+                </div>
 
-    <div id="carouselExampleCaptions" className="carousel slide mt-5 mb-0" data-ride="carousel">
-        <ol className="carousel-indicators">
-          <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
+            </div>
+
+    <div id="carouselExampleCaptions" className="carousel slide mt-5 mb-5 bg-white" data-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active" data-interval="1500">
-            <img src="./IMG/8-lapices-acuarelables.png" className="d-block w-50" height={250} alt=""/>
-            <br /><br /><br /><br /><br /><br />
-            <div className="carousel-caption d-none d-md-block">
-              <h5 className="text-dark">First slide label</h5>
-              <p className="text-dark">Some representative placeholder content for the first slide.</p>
-            </div>
+            <img src="./IMG/8-lapices-acuarelables.png" className="d-block w-50 " height={200} alt=""/>
           </div>
           <div className="carousel-item" data-interval="1000">
-            <img src="./IMG/clips-19mm.png" className="d-block w-50" height={250} alt="..."/>
-            <br /><br /><br /><br /><br /><br />
-            <div className="carousel-caption d-none d-md-block">
-              <h5 className="text-dark">Second slide label</h5>
-              <p className="text-dark">Some representative placeholder content for the second slide.</p>
-            </div>
+            <img src="./IMG/clips-19mm.png" className="d-block w-50" height={200}/>
           </div>
           <div className="carousel-item" data-interval="1000">
-            <img src="./IMG/clips-25mm.png" className="d-block w-50" height={250} alt="..."/>
-            <br /><br /><br /><br /><br /><br />
-            <div className="carousel-caption d-none d-md-block">
-              <h5 className="text-dark">Third slide label</h5>
-              <p className="text-dark">Some representative placeholder content for the third slide.</p>
-            </div>
+            <img src="./IMG/clips-25mm.png" className="d-block w-50"  height={200}/>
+          </div>
+          <div className="carousel-item" data-interval="1000">
+            <img src="./IMG/clips-25mm.png" className="d-block w-50"  height={200}/>
+          </div>
+          <div className="carousel-item" data-interval="1000">
+            <img src="./IMG/clips-25mm.png" className="d-block w-50"  height={200}/>
+          </div>
+          <div className="carousel-item" data-interval="1000">
+            <img src="./IMG/clips-25mm.png" className="d-block w-50"  height={200}/>
+          </div>
+          <div className="carousel-item" data-interval="1000">
+            <img src="./IMG/clips-25mm.png" className="d-block w-50"  height={200}/>
+          </div>
+          <div className="carousel-item" data-interval="1000">
+            <img src="./IMG/clips-25mm.png" className="d-block w-50"  height={200}/>
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
@@ -43,6 +45,12 @@ export const Carrousel = () =>{
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="sr-only">Next</span>
         </button>
+</div>
+<div id="promos">
+                <div className="dos">
+                 <h5> <span>Envio gratis </span> en compras mayores a $25.000 </h5>
+                </div> 
+            </div>
 </div>
 )
 }

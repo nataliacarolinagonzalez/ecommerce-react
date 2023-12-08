@@ -10,7 +10,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@300&display=swap');
 
 body{
-    background-color: #fff;
     font-family: 'Noto Sans HK', sans-serif;
     width: 100vw;
     /* margin: 0;
@@ -21,102 +20,10 @@ body{
     overflow-x: hidden;
 }
 
-/* MAIN */
-main {
-        background-color: white;
-        text-align: center;
-    }
-
-@keyframes cambiarColor {
-    0% {
-        background-color: lightblue;
-    }
-    50%{
-        background-color: #98BDC9;
-    }
-    100% {
-        background-color: #0B3954;
-    }}
-main #promos{
-    width: auto;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    padding: 1em;
-    margin-bottom: 3em;
-}
-main #promos h5{
-    text-align: center; 
-    background-color:lightblue;
-    padding: 1.5em;
-    border-radius: 0.2em;
-    font-size: 1.3em;
-    animation: cambiarColor 2s 1s;
-    animation-iteration-count: infinite;
-    margin: 2em;
-}
-#promos span{
-    color: #EF233C;
-    font-weight: bold;
-}
 
 
 /* CARDS */
-.container main .cards-container {
-    text-align: center;
-}
-.container main .cards-container p{
-    margin-bottom: 0.6em;
-}
-.section-cards-header h1 {
-    color:#0B3954;
-    margin: 1.5em auto;
-    text-shadow: 1px 1px 5px #0B3954;
-    letter-spacing: 0.3em;
-}
-#cards {
-    display: inline-block;
-    border: none;
-    width: 17em;
-    height: 26em;
-    padding: 0.5em;
-    color:#0B3954;
-    margin: 1em;
-    font-size: 0.9em;
-    box-shadow: 0px 0px 6px 0.5px #525a5f;
-    border-radius: 0.5em;
-    overflow: hidden;
-}
-#cards img {
-    width: 17em;
-    height: 17em;
-}
-#cards img:hover {
-    transform: scale(1.3);
-    overflow: hidden;
-    transition: 1.5s ease;
-    
-}
-#card #botones{
-    width: 10em;
-    height: 1.5em;
-}
-#cards #cart{
-    font-size: 1em; 
-    outline: none;
-    border: none; 
-    background-color: transparent;
-}
-#cards #cart:hover{
-    text-shadow: 1px 1px 5px #0B3954;
-}
-#cards #fav{
-    outline: none;
-    border: none; 
-    background-color: transparent;
-    color: #EF233C;
-    font-size: 1em;
-} 
+
 
 /* Media Queries */
 @media screen and (max-width: 380px){

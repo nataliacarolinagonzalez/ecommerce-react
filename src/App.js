@@ -21,16 +21,16 @@ function App() {
   return (
     <div className="App">
       <div className="container-fluid m-0 p-0">
-        <div>
+        <div >
           {/* <h1>Mi ECommerce ReactJS</h1>   
-          <hr />
+          
           <br /> */}
           
 
           <BrowserRouter>
             <Navbar />
             <Carrousel/>
-
+            
             <Routes>
               <Route index element={<Inicio titulo="Inicio" />} />
 

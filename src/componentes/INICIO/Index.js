@@ -48,7 +48,7 @@ export function Index(props) {
     }
 
     return (
-        <div className="Inicio">
+        <div className="Inicio bg-secondary">
             
                 {/* <h3>Componente {enunciado}</h3>
                 <hr /> */}
@@ -56,7 +56,7 @@ export function Index(props) {
                 <div className="inicio">
                     <div className="section-cards">
                         <div className="section-cards-header">
-                            <h1>Listado de productos</h1>
+                            <h1>- Listado de productos -</h1>
                         </div>
 
                         <div className="cards-container">

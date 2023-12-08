@@ -32,22 +32,22 @@ export const Navbar = () =>
                     <div className="collapse navbar-collapse" id="options">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/inicio">Inicio</NavLink>
+                                <NavLink className="nav-link text-white mx-5" to="/inicio">Inicio</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/alta">Alta</NavLink>
+                                <NavLink className="nav-link text-white mx-5" to="/alta">Alta</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/contacto">Contacto</NavLink>
+                                <NavLink className="nav-link text-white mx-5" to="/contacto">Contacto</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/nosotros">Nosotros</NavLink>
+                                <NavLink className="nav-link text-white mx-5" to="/nosotros">Nosotros</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/carrito">Carrito</NavLink>
+                                <NavLink className="nav-link text-white mx-5" to="/carrito">Carrito</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/otra">Otra</NavLink>
+                                <NavLink className="nav-link text-white mx-5" to="/otra">Otra</NavLink>
                             </li>
                         </ul>
                     </div>  
