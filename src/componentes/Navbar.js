@@ -19,7 +19,7 @@ export const Navbar = () =>
                 </div>
                 <div id="carrito">
                     <NavLink to="#"><FontAwesomeIcon icon={faUser} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
-                    <NavLink to="/otra"><FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
+                    <NavLink to="/favoritos"><FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
                     <NavLink to="/carrito"><FontAwesomeIcon icon={faCartShopping} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
                 </div>
             </div>

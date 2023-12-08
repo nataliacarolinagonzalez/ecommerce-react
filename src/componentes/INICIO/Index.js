@@ -6,11 +6,12 @@ import { obtenerProductos } from '../Servicios/productos'
 import { Card } from './Card'
 import { useLocalStorage } from '../Hooks/useLocalStore'
 
+
 export function Index(props) {
     const { titulo: enunciado } = props
-
     const [productos, setProductos] = useState([])
     const [carrito, setCarrito] = useLocalStorage('carrito', [])
+    const [favoritos, setFavoritos] = useLocalStorage('favoritos', [])
 
     useEffect(() => {
         console.log('Componente Index Inicio (montado)')
@@ -47,6 +48,27 @@ export function Index(props) {
         setCarrito(carritoClon)
     }
 
+
+    function agregarFavoritosID(id) {
+        console.log('agregarFavoritosID', id)
+
+        const producto = productos.find(p => p.id === id)
+        console.log(producto)
+
+        const favoritosClon = [...favoritos]
+
+        let pC = favoritosClon.find(prodC => prodC.id === producto.id)
+        if(!pC) {
+            producto.cantidad = 1
+            favoritosClon.push(producto)
+        }
+        else {
+            pC.cantidad++
+        }
+        setFavoritos(favoritosClon)
+    }
+
+
     return (
         <div className="Inicio bg-secondary">
             
@@ -65,6 +87,7 @@ export function Index(props) {
                                         key={index} 
                                         producto={producto} 
                                         agregarCarritoID={agregarCarritoID}
+                                        agregarFavoritosID={agregarFavoritosID}
                                     />
                                 )
                             }

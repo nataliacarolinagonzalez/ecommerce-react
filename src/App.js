@@ -8,12 +8,15 @@ import { Index as Carrito } from './componentes/CARRITO/Index';
 import { Index as Contacto } from './componentes/CONTACTO/Index';
 import { Index as Nosotros } from './componentes/NOSOTROS/Index';
 import { Index as Otra } from './componentes/OTRA/Index';
+import { Index as Favoritos } from './componentes/FAVORITOS/Index';
+
 
 import { RutaNoValida } from './componentes/RutaNoValida';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Footer } from './componentes/Footer';
 import { Carrousel } from './componentes/Carrousel';
+import Prueba from './prueba';
 
 
 
@@ -26,7 +29,7 @@ function App() {
           
           <br /> */}
           
-
+          <Prueba/>
           <BrowserRouter>
             <Navbar />
             <Carrousel/>
@@ -40,6 +43,7 @@ function App() {
               <Route path='contacto' element={<Contacto titulo="Contacto" />} />
               <Route path='nosotros' element={<Nosotros titulo="Nosotros" />} />
               <Route path='otra' element={<Otra titulo="Otra" />} />
+              <Route path='favoritos' element={<Favoritos titulo="Favoritos" />} />
               
               <Route path='*' element={<RutaNoValida />} />
             </Routes>

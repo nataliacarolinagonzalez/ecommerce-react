@@ -1,0 +1,31 @@
+.Favoritos .jumbotron {
+    background-color: chocolate;
+    color: white;
+}
+
+.Favoritos hr {
+    background-color: #eee;
+}
+
+.favoritos > button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    margin-bottom: 15px;
+    display: block;
+    margin: 30px auto;
+}
+
+.favoritos__borrar {
+    background-color: red;
+    color: white;
+}
+
+.favoritos__pedir {
+    background-color: green;
+    color: white;
+}
