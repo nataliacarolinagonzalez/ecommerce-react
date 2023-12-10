@@ -57,6 +57,17 @@ export function Index(props) {
         setCarrito([])
     }
 
+    function subtotal__carrito (cantidad, precio){
+        let subtotal = cantidad*precio
+        let total =+ subtotal
+        return subtotal, total
+    }
+
+   /*  function total__carrito (){
+        let subtotal = cantidad*precio
+        return subtotal
+    } */
+
     return (
         <div className="Carrito">
             <div>
@@ -75,10 +86,13 @@ export function Index(props) {
                                 borrarID={borrarID}
                                 incrementarCantID={incrementarCantID}
                                 decrementarCantID={decrementarCantID}
+                                subtotal__carrito={subtotal__carrito}
                             />
                             <div id='pie-button'>
                                 <button className="carrito__pedir" onClick={pedir}>Pedir</button>
                                 <button className="carrito__borrar ml-3" onClick={borrarAll}>Borrar</button>
+                                {/* <p className="subtotal__carrito ml-3" subtotal__carrito={subtotal__carrito}>{total} </p> */}
+
 
                             </div>
                         </>

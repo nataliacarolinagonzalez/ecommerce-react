@@ -1,7 +1,8 @@
 .Carrito {
     height: 100%;
     text-align: center;
-    padding: 1em 5em;  
+    padding: 1em 5em; 
+    margin-top: 13em;  
 }
 
 .Carrito .carrito__pedir, .carrito .carrito__borrar {

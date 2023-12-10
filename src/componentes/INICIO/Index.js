@@ -5,6 +5,8 @@ import './Index.css'
 import { obtenerProductos } from '../Servicios/productos'
 import { Card } from './Card'
 import { useLocalStorage } from '../Hooks/useLocalStore'
+import { Carrousel } from './Carrousel'
+
 
 
 export function Index(props) {
@@ -77,6 +79,7 @@ export function Index(props) {
             
                 {/* <h3>Componente {enunciado}</h3>
                 <hr /> */}
+                <Carrousel/> 
 
                 <div className="inicio">
                     <div className="section-cards">

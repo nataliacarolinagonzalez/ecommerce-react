@@ -63,7 +63,10 @@ export default function Ingreso(props) {
 
                 {/* ----- botón de envío ------ */}
                 <div id="pie-button">
-                    <button disabled={invalid} className={`btn-${editarID?'envioOK':'envioNO'} mt-3 mb-5`}>
+                    {/* <button disabled={invalid} className={`btn-${editarID?'envioOK':'envioNO'} mt-3 mb-5`}>
+                        { editarID? 'Actualizar' : 'Enviar' }
+                    </button> */}
+                    <button disabled={invalid} className="btn-danger mt-3 mb-5">
                         { editarID? 'Actualizar' : 'Enviar' }
                     </button>
                 </div>

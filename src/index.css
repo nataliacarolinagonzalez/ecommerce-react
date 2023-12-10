@@ -4,7 +4,7 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@300&display=swap');
 
-body{
+.App{
     font-family: 'Noto Sans HK', sans-serif;
     width: 100vw;
     margin: 0;

@@ -84,7 +84,7 @@ export function Index(props) {
         const p = producto
         const noValido =
             //!p.nombre ||
-           /*  !/^[a-zA-Z ]{3,15}$/.test(p.nombre) || */
+            !/^[a-zA-Z ]{3,15}$/.test(p.nombre) ||
             !/^[1-9]{3,10}$/.test(p.precio) ||
             !/^\d{1,10}$/.test(p.stock) ||
             !/^[a-zA-Z ]{3,15}$/.test(p.marca) ||
@@ -92,7 +92,7 @@ export function Index(props) {
             !/^[a-zA-Z ]{3,30}$/.test(p.detalles) ||
             !p.foto
 
-            const noValidoNombre =!/^[a-zA-Z ]{3,15}$/.test(p.nombre)
+            /* const noValidoNombre =!/^[a-zA-Z ]{3,15}$/.test(p.nombre) */
 
             //Faltan las alertas en cada input
              
@@ -210,6 +210,8 @@ export function Index(props) {
                 {/* <Button variant="danger" onClick={handleShow}>
                     Launch demo modal
                 </Button> */}
+                <br />
+                <br />
                 <br />
 
                 <Modal show={show} onHide={handleClose}>

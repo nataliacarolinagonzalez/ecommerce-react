@@ -3,7 +3,7 @@ import './Tabla.css'
 
 export const Tabla = props => {
 
-    const { carrito, borrarID, incrementarCantID, decrementarCantID } = props
+    const { carrito, borrarID, incrementarCantID, decrementarCantID, subtotal__carrito } = props
     //console.log(productos)
 
     return (
@@ -37,11 +37,12 @@ export const Tabla = props => {
                                         <button className='btn-dec ml-5' onClick={() => decrementarCantID(producto.id)}>-</button>
                                         <button className='btn-inc ml-2' onClick={() => incrementarCantID(producto.id)}>+</button>
                                     </td>
+                                    <td>${subtotal__carrito(producto.cantidad, producto.precio)}</td>
                                     <td>
                                         <button className='btn-borrar' onClick={() => borrarID(producto.id)}>Borrar</button>
-                                    </td>
+                                    </td> 
                                 </tr>
-                            )
+                                )
                         }
                     </tbody>
                 </table>
