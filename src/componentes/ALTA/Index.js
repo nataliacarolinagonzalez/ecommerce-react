@@ -28,7 +28,7 @@ export function Index(props) {
         envio: ''
     })
     const [editarID, setEditarID] = useState(null)
-
+   
     // ------------------------------------------------------------------
     //   Control del menú modal de confirmación de borrado de producto
     // ------------------------------------------------------------------
@@ -84,15 +84,42 @@ export function Index(props) {
         const p = producto
         const noValido =
             //!p.nombre ||
-            !/^[a-zA-Z ]{3,}$/.test(p.nombre) ||
-            !p.precio ||
-            !p.stock ||
-            !p.marca ||
-            !p.categoria ||
-            !p.detalles ||
+           /*  !/^[a-zA-Z ]{3,15}$/.test(p.nombre) || */
+            !/^[1-9]{3,10}$/.test(p.precio) ||
+            !/^\d{1,10}$/.test(p.stock) ||
+            !/^[a-zA-Z ]{3,15}$/.test(p.marca) ||
+            !/^[a-zA-Z ]{3,15}$/.test(p.categoria) ||
+            !/^[a-zA-Z ]{3,30}$/.test(p.detalles) ||
             !p.foto
 
-        return noValido
+            const noValidoNombre =!/^[a-zA-Z ]{3,15}$/.test(p.nombre)
+
+            //Faltan las alertas en cada input
+             
+            /* !/^[1-9]{3,10}$/.test(p.precio) ||
+            !/^\d{1,10}$/.test(p.stock) ||
+            !/^[a-zA-Z ]{3,15}$/.test(p.marca) ||
+            !/^[a-zA-Z ]{3,15}$/.test(p.categoria) ||
+            !/^[a-zA-Z ]{3,30}$/.test(p.detalles) ||
+            !p.foto */
+            
+            /* if(noValidoNombre){
+                console.log("error")
+                
+            }else{
+                console.log("ok!")
+                
+            } */
+
+       /*  let isError = false
+        let errors = {}
+
+        if(!p.nombre.trim()){
+            errors.nombre = "Debe completar el nombre del producto"
+            isError = true
+        }
+        return isError ? errors : null */
+        return noValido 
     }
 
     // --------------------------------------------------
@@ -176,21 +203,22 @@ export function Index(props) {
 
     return (
         <div className="Alta">
-            <div className="jumbotron">
-                <h3>Componente {enunciado}</h3>
-                <hr />
-
+            <div >
+                {/* <h3>Componente {enunciado}</h3>
+                <hr /> */}
+                <h1>- Alta de productos -</h1>
                 {/* <Button variant="danger" onClick={handleShow}>
                     Launch demo modal
                 </Button> */}
+                <br />
 
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Borrado de Producto</Modal.Title>
+                        <Modal.Title>Eliminación de Producto</Modal.Title>
                     </Modal.Header>
 
                     <Modal.Body>
-                        ¿Desea eliminar el producto de nombre {productos.find(p => p.id === borrarID)?.nombre}?
+                        ¿Desea eliminar el producto: {productos.find(p => p.id === borrarID)?.nombre}?
                     </Modal.Body>
                     
                     <Modal.Footer>

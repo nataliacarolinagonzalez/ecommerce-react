@@ -7,11 +7,11 @@ export const Tabla = props => {
     //console.log(productos)
 
     return (
-        <div className="Tabla">
+        <div className="TablaCarrito">
 
             <div className="table-responsive">
-                <table className="table table-dark">
-                    <thead>
+                <table>
+                   {/*  <thead>
                         <tr>
                             <th>#</th>
                             <th>nombre</th>
@@ -21,23 +21,24 @@ export const Tabla = props => {
                             <th>cantidad</th>
                             <th>acciones</th>
                         </tr>
-                    </thead>
+                    </thead> */}
                     <tbody>
                         {
                             carrito.map((producto, index) =>
                                 <tr key={index}>
-                                    <td>{producto.id}</td>
-                                    <td>{producto.nombre}</td>
-                                    <td>${producto.precio}</td>
-                                    <td>{producto.marca}</td>
+                                    {/* <td>{producto.id}</td> */}
                                     <td><img width="100px" src={producto.foto} alt={"foto de " + producto.nombre} /></td>
+                                    <td>{producto.nombre}</td>
+                                    <td>{producto.detalles}</td>
+                                    <td>{producto.marca}</td>
+                                    <td>${producto.precio}</td>
                                     <td>
                                         {producto.cantidad}
-                                        <button className='btn btn-info ml-2' onClick={() => decrementarCantID(producto.id)}>-</button>
-                                        <button className='btn btn-info ml-2' onClick={() => incrementarCantID(producto.id)}>+</button>
+                                        <button className='btn-dec ml-5' onClick={() => decrementarCantID(producto.id)}>-</button>
+                                        <button className='btn-inc ml-2' onClick={() => incrementarCantID(producto.id)}>+</button>
                                     </td>
                                     <td>
-                                        <button className='btn btn-danger' onClick={() => borrarID(producto.id)}>Borrar</button>
+                                        <button className='btn-borrar' onClick={() => borrarID(producto.id)}>Borrar</button>
                                     </td>
                                 </tr>
                             )

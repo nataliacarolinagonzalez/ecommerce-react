@@ -15,9 +15,9 @@ export function Index(props) {
 
     return (
         <div className="Nosotros">
-            <div className="jumbotron">
-                <h3>Componente {enunciado}</h3>
-                <hr />
+            <div >
+                {/* <h3>Componente {enunciado}</h3>
+                <hr /> */}
 
 
             </div>

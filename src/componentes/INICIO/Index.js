@@ -12,7 +12,7 @@ export function Index(props) {
     const [productos, setProductos] = useState([])
     const [carrito, setCarrito] = useLocalStorage('carrito', [])
     const [favoritos, setFavoritos] = useLocalStorage('favoritos', [])
-
+    
     useEffect(() => {
         console.log('Componente Index Inicio (montado)')
 
@@ -46,6 +46,7 @@ export function Index(props) {
             pC.cantidad++
         }
         setCarrito(carritoClon)
+        
     }
 
 
@@ -53,24 +54,26 @@ export function Index(props) {
         console.log('agregarFavoritosID', id)
 
         const producto = productos.find(p => p.id === id)
-        console.log(producto)
+        //console.log(producto)
 
         const favoritosClon = [...favoritos]
+        //console.log(favoritosClon)
 
         let pC = favoritosClon.find(prodC => prodC.id === producto.id)
         if(!pC) {
-            producto.cantidad = 1
+            /* producto.cantidad = 1 */
             favoritosClon.push(producto)
         }
         else {
-            pC.cantidad++
+            console.log("borrar de favoritos")
+
         }
         setFavoritos(favoritosClon)
     }
 
 
     return (
-        <div className="Inicio bg-secondary">
+        <div className="Inicio">
             
                 {/* <h3>Componente {enunciado}</h3>
                 <hr /> */}
@@ -80,7 +83,7 @@ export function Index(props) {
                         <div className="section-cards-header">
                             <h1>- Listado de productos -</h1>
                         </div>
-
+                        <br /><br />
                         <div className="cards-container">
                             { productos.map( (producto, index) => 
                                     <Card 

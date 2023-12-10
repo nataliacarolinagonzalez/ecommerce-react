@@ -1,3 +1,38 @@
-.Tabla table th {
-    text-transform: uppercase;
+.TablaCarrito table{
+    width: 70%;
+}
+
+.TablaCarrito table tr td {
+     border-top: 1px solid #0B3954;
+     padding: 1em;
+     font-weight: bold; 
+     font-size: 0.8em;
+     color: #0B3954; 
+     letter-spacing: 0.1em;
+
+ }
+
+ .TablaCarrito table tr td img{
+    width: 80px;
+
+}
+
+.TablaCarrito .btn-borrar, .TablaCarrito .btn-inc, .TablaCarrito .btn-dec{
+    color: #0B3954;
+    padding: 1em;
+    font-weight: bold; 
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.TablaCarrito .btn-inc, .TablaCarrito .btn-dec{
+    font-size: 1.2em;
+    padding: 0
+    
+}
+
+.TablaCarrito .btn-borrar:hover, .TablaCarrito .btn-inc:hover, .TablaCarrito .btn-dec:hover{
+    text-shadow: 3px 3px 4px #000;
 }

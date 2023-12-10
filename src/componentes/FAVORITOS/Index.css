@@ -1,31 +1,35 @@
-.Favoritos .jumbotron {
-    background-color: chocolate;
-    color: white;
+.Favoritos {
+    height: 100%;
+    text-align: center;
+    padding: 1em 5em;  
 }
 
-.Favoritos hr {
-    background-color: #eee;
+.Favoritos .favoritos__pedir, .favoritos .favoritos__borrar {
+    color: whitesmoke; 
+    border:solid 1px whitesmoke;
+    background-color: #ec5151;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-size: 1em;
+    width: 100px;
+}   
+
+.favoritos .favoritos__pedir:hover, .favoritos .favoritos__borrar:hover{
+    background-color: whitesmoke;
+    color: #ec5151;
+    border:solid 1px #ec5151;
 }
 
-.favoritos > button {
-    width: 200px;
-    height: 50px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 22px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 5px;
-    margin-bottom: 15px;
-    display: block;
-    margin: 30px auto;
+.favoritos h1 {
+    color: #0B3954;
+    font-size: 2em;
+    margin: 1em auto;
+    text-shadow: 4px 4px 10px black;
+    letter-spacing: 0.3em;
 }
-
-.favoritos__borrar {
-    background-color: red;
-    color: white;
-}
-
-.favoritos__pedir {
-    background-color: green;
-    color: white;
+.favoritos #pie-button{
+    margin-top: 2em; 
+    display: flex;
+    justify-content: center;
+    
 }

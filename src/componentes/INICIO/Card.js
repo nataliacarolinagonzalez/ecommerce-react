@@ -4,12 +4,12 @@ import{faHeart, faCartShopping} from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from "react";
 import { faHeart as farFaHeart } from '@fortawesome/free-regular-svg-icons'
 
-import Button from 'react-bootstrap/Button';
+/* import Button from 'react-bootstrap/Button'; */
 import Modal from 'react-bootstrap/Modal';
 
 export const Card = props => {
 
-    const { producto, agregarCarritoID, agregarFavoritosID } = props
+    const { producto, agregarCarritoID, agregarFavoritosID, isFav } = props
     const [menuSelect, setMenuSelect] = useState(false);
 
     const toggleMenu = () => setMenuSelect(prevState => !prevState);
@@ -22,7 +22,7 @@ export const Card = props => {
         <div className="Card">
 
 
-          <Modal className='text-dark' show={show} onHide={handleClose}>
+          <Modal className='text-dark' show={show} isfav={isFav} onHide={handleClose}>
            {/*  <Modal.Header closeButton>
                 <Modal.Title></Modal.Title>
             </Modal.Header> */}
@@ -47,12 +47,46 @@ export const Card = props => {
                 }><FontAwesomeIcon icon={faCartShopping} style={{color:'#EF233C', fontSize: '20px', paddingLeft: '10px'}}></FontAwesomeIcon></button>
                 <button id='fav' onClick={
                     () => {agregarFavoritosID(producto.id);toggleMenu()}
-                }> {menuSelect ? <FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '20px', paddingLeft: '10px'}}></FontAwesomeIcon> : <FontAwesomeIcon icon={farFaHeart} style={{color:'#EF233C', fontSize: '20px', paddingLeft: '10px'}}></FontAwesomeIcon>}</button>
+                }> {menuSelect ? <FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '20px', paddingLeft: '10px'}} ></FontAwesomeIcon> : <FontAwesomeIcon icon={farFaHeart} style={{color:'#EF233C', fontSize: '20px', paddingLeft: '10px'}}></FontAwesomeIcon>}</button>
                 </div>
             </section>
         </div>
     )
 }
 
+
+
+
+
+/* return (
+    <div className="Card">
+
+
+      <Modal className='text-dark' show={show} onHide={handleClose}>
+      
+        <Modal.Body>
+            Producto agregado al carrito
+        </Modal.Body>
+        
+      </Modal>
+            
+        <section>
+            <img src={producto.foto} alt="" />
+            <p style={{fontVariant:"small-caps"}}>{producto.categoria}</p>
+            <p className="nombre"><b>{producto.nombre}</b></p>
+            <p>{producto.detalles}</p>
+            <p className="precio">${producto.precio}</p>
+            
+            <div id='botones'>
+            <button id='cart' onClick={
+                () => {agregarCarritoID(producto.id); handleShow()}
+            }><FontAwesomeIcon icon={faCartShopping} style={{color:'#EF233C', fontSize: '20px', paddingLeft: '10px'}}></FontAwesomeIcon></button>
+            <button id='fav' onClick={
+                () => {agregarFavoritosID(producto.id);toggleMenu()}
+            }> {menuSelect ? <FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '20px', paddingLeft: '10px'}}></FontAwesomeIcon> : <FontAwesomeIcon icon={farFaHeart} style={{color:'#EF233C', fontSize: '20px', paddingLeft: '10px'}}></FontAwesomeIcon>}</button>
+            </div>
+        </section>
+    </div>
+) */
 
 

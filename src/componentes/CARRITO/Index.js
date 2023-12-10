@@ -59,25 +59,28 @@ export function Index(props) {
 
     return (
         <div className="Carrito">
-            <div className="jumbotron">
-                <h3>Componente {enunciado}</h3>
-                <hr />
+            <div>
+                {/* <h3>Componente {enunciado}</h3>
+                <hr /> */}
 
                 <div className="carrito">
-                    <h1>Carrito de compras</h1>
+                    <h1>- Carrito de compras -</h1>
                     <br /><br />
 
                     {carrito.length === 0 && <h3 className='alert alert-danger'>No se encontraron pedidos</h3>}
                     {carrito.length > 0 &&
                         <>
-                            <button className="carrito__borrar" onClick={borrarAll}>Borrar</button>
                             <Tabla 
                                 carrito={carrito} 
                                 borrarID={borrarID}
                                 incrementarCantID={incrementarCantID}
                                 decrementarCantID={decrementarCantID}
                             />
-                            <button className="carrito__pedir" onClick={pedir}>Pedir</button>
+                            <div id='pie-button'>
+                                <button className="carrito__pedir" onClick={pedir}>Pedir</button>
+                                <button className="carrito__borrar ml-3" onClick={borrarAll}>Borrar</button>
+
+                            </div>
                         </>
                     }
                 </div>

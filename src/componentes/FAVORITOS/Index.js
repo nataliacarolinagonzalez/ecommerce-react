@@ -2,9 +2,10 @@ import { useEffect } from 'react'
 
 import './Index.css'
 
-import { Tabla } from './Tabla'
+import { TablaFavoritos } from './Tabla'
 import { useLocalStorage } from '../Hooks/useLocalStore'
 import { enviarFavoritos } from '../Servicios/favoritos'
+
 
 export function Index(props) {
     const { titulo: enunciado } = props             // destructuring Object con alias
@@ -31,7 +32,6 @@ export function Index(props) {
         setFavoritos(favoritosClon)
     }
     
-    
     async function pedirFavoritos() {
         console.log('pedir')
 
@@ -41,24 +41,26 @@ export function Index(props) {
     }
 
     return (
-        <div className="Favoritos">
-            <div className="jumbotron">
-                <h3>Componente {enunciado}</h3>
-                <hr />
+        <div className="Favoritos bg-white">
+            <div>
+                {/* <h3>Componente {enunciado}</h3>
+                <hr /> */}
 
                 <div className="favoritos">
-                    <h1>Mis favoritos</h1>
+                    <h1>- Productos favoritos -</h1>
                     <br /><br />
 
-                    {favoritos.length === 0 && <h3 className='alert alert-danger'>No se encontraron favoritos</h3>}
+                    {favoritos.length === 0 && <h3 className='alert alert-danger'>No se encontraron pedidos</h3>}
                     {favoritos.length > 0 &&
                         <>
-                            <button className="favoritos__borrar" onClick={borrarAllFavoritos}>Borrar</button>
-                            <Tabla 
+                            <TablaFavoritos 
                                 favoritos={favoritos} 
-                                borrarIDFav={borrarIDFavoritos}
+                                borrarIDFavoritos={borrarIDFavoritos}
                             />
-                            <button className="favoritos__pedir" onClick={pedirFavoritos}>Pedir</button>
+                            <div id='pie-button'>
+                                <button className="favoritos__pedir"  onClick={pedirFavoritos}>Pedir</button>
+                                <button   className="favoritos__borrar ml-3" onClick={borrarAllFavoritos}>Borrar</button>
+                            </div>
                         </>
                     }
                 </div>

@@ -7,24 +7,9 @@ import{faUser, faHeart, faCartShopping, faMagnifyingGlass} from '@fortawesome/fr
 
 export const Navbar = () =>
        <div >
-            <div className="barra">
-                <div id="logo">
-                    <NavLink to="/inicio"><img src="IMG/logo.png" alt="Logo"/></NavLink>
-                </div>
-                <div id="barra-busqueda">
-                    <form action="#">
-                        <input type="text" placeholder="¿Qué estás buscando?" maxLength="150" minLength="3"/>
-                        <button><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-                    </form>
-                </div>
-                <div id="carrito">
-                    <NavLink to="#"><FontAwesomeIcon icon={faUser} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
-                    <NavLink to="/favoritos"><FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
-                    <NavLink to="/carrito"><FontAwesomeIcon icon={faCartShopping} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
-                </div>
-            </div>
+            
             <div >  
-                <nav className="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+                <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                    {/* <img className='animacion' src="IMG/logo.png" alt=""/> */}
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#options">
                         <span className="navbar-toggler-icon"></span></button>
@@ -62,5 +47,21 @@ export const Navbar = () =>
                         </ul>
                     </div> */}     
                 </nav> 
+                <div className="barra">
+                <div id="logo">
+                    <NavLink to="/inicio"><img src="IMG/logo.png" alt="Logo"/></NavLink>
+                </div>
+                <div id="barra-busqueda">
+                    <form action="#">
+                        <input type="text" placeholder="¿Qué estás buscando?" maxLength="150" minLength="3"/>
+                        <button><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+                    </form>
+                </div>
+                <div id="carrito">
+                    <NavLink to="#"><FontAwesomeIcon icon={faUser} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
+                    <NavLink to="/favoritos"><FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
+                    <NavLink to="/carrito"><FontAwesomeIcon icon={faCartShopping} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
+                </div>
+            </div>
             </div>    
         </div>         

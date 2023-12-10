@@ -7,13 +7,13 @@ export const Tabla = props => {
     //console.log(productos)
 
     return (
-        <div className="Tabla">
+        <div className="TablaAlta">
 
             { productos.length === 0 && <h3 className='alert alert-danger'>No se encontraron productos</h3> }
 
             { productos.length > 0 &&
                 <div className="table-responsive">
-                    <table className="table table-dark">
+                    <table>
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -25,7 +25,7 @@ export const Tabla = props => {
                                 <th>detalles</th>
                                 <th>foto</th>
                                 <th>envío</th>
-                                <th>acciones</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,11 +42,11 @@ export const Tabla = props => {
                                         <td><img width="100%" src={producto.foto} alt={'foto de ' + producto.nombre} /></td>
                                         <td>{producto.envio? 'Si':'No'}</td>                           
                                         <td>
-                                            <button className={`btn btn-${editarID && editarID === producto.id?'outline-':''}warning mb-2`} onClick={
+                                            <button className={`btn-${editarID && editarID === producto.id?'envioNO':'envioOK'} `} onClick={
                                                 () => editar(producto.id)
                                             }>{ editarID && editarID === producto.id? 'Cancelar' : 'Editar' }</button>
                                             <br />
-                                            <button disabled={editarID? true : false} className="btn btn-danger" onClick={
+                                            <button disabled={editarID? true : false} className="btn-envioNO " onClick={
                                                 () => borrar(producto.id)
                                             }>Borrar</button>
                                         </td>                           

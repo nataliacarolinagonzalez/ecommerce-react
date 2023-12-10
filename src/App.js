@@ -29,7 +29,7 @@ function App() {
           
           <br /> */}
           
-          <Prueba/>
+         {/*  <Prueba/> */}
           <BrowserRouter>
             <Navbar />
             <Carrousel/>

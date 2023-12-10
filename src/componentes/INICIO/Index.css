@@ -1,5 +1,5 @@
 .inicio {
-    height: auto;
+    height: 100%;
     text-align: center;
     padding: 1em 5em;  
 }
@@ -32,8 +32,8 @@
 }
 
 .inicio .section-cards-header h1 {
-    color: whitesmoke;
-    font-size: 3em;
+    color: #0B3954;
+    font-size: 2em;
     margin: 1em auto;
     text-shadow: 4px 4px 10px black;
     letter-spacing: 0.3em;

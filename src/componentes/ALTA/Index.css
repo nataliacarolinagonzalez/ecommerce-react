@@ -1,8 +1,14 @@
-.Alta .jumbotron {
-    background-color: chocolate;
-    color: white;
+.Alta{
+    text-align: center;
 }
 
-.Alta hr {
-    background-color: #eee;
+.Alta h1{
+    color: #0B3954;
+    font-size: 2em;
+    margin: 1em auto;
+    text-shadow: 4px 4px 10px black;
+    letter-spacing: 0.3em;
 }
+
+
+
