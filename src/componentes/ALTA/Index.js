@@ -210,9 +210,6 @@ export function Index(props) {
                 {/* <Button variant="danger" onClick={handleShow}>
                     Launch demo modal
                 </Button> */}
-                <br />
-                <br />
-                <br />
 
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
