@@ -24,14 +24,6 @@ export function Index(props) {
         }
     },[])
 
-    async function onSubmit(e) {
-        e.preventDefault()
-
-       
-    }
-
-
-
     function onChange(e) {
         const { type, id, value, checked } = e.target
         console.log(type, value, checked, id)
@@ -41,16 +33,38 @@ export function Index(props) {
 
     function formInvalid() {
         const f = form
-        const noValido =
-            //!p.nombre ||
-            !/^[a-zA-Z ]{3,}$/.test(f.nombre) ||
-            !f.tel ||
-            !f.email ||
-            !f.marca ||
-            !f.acercaDe
+        const formNoValido =
+            !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(f.nombre) ||
+            !/^\d{10}$/.test(f.tel) ||
+            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email) ||
+            !f.comentario 
+            /* !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{30,350}$/.test(f.comentario)  */
             
-        return noValido
+            return formNoValido
+        
     }
+
+    function validarNombre(){
+        const f = form
+        const noValidoNombre =!/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(f.nombre)
+        return noValidoNombre
+    }
+    
+    function validarEmail(){
+        const f = form
+        const noValidoEmail =!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)
+        return noValidoEmail
+    }
+    function validarTel(){
+        const f = form
+        const noValidoTel =!/^\d{10}$/.test(f.tel) 
+        return noValidoTel
+    }
+    /* function validarComentario(){
+        const f = form
+        const noValidoComentario =!/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,350}$/.test(f.comentario)
+        return noValidoComentario
+    } */
 
     return (
         <div className="Contacto">
@@ -65,8 +79,12 @@ export function Index(props) {
                 <Form
                         form={form}
                         onChange={onChange}
-                        onSubmit={onSubmit}
                         invalid={formInvalid()}
+                        nombreInvalid={validarNombre()}
+                        emailInvalid = {validarEmail()}
+                        telInvalid = {validarTel()}
+                        /* comentarioInvalid = {validarComentario()} */
+                    
                 
                 />
 

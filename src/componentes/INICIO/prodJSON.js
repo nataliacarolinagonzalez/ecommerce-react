@@ -166,5 +166,16 @@
         "envio": true,
         "foto": "https://libreriaslevalle.com/15503-home_default/lapices-de-colores-pastel-tentacion-x20-unidades-mooving.jpg",
         "id": "15"
+      },
+      {
+        "nombre": "Marcadores Neón",
+        "precio": 3935,
+        "stock": 71,
+        "marca": "Sharpie",
+        "categoria": "Marcadores",
+        "detalles": "Marcador Fino Neón Surtido x 5",
+        "envio": true,
+        "foto": "https://acdn.mitiendanube.com/stores/001/636/171/products/1811-99448b2b8d4d3b2a7d16207560602007-1024-1024.webp",
+        "id": "16"
       }
   ]

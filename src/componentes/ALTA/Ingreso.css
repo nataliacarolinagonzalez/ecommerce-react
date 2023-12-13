@@ -84,6 +84,11 @@
 .Ingreso input:valid{
     box-shadow: 3px 2px 5px #0B3954;}
 
+.Ingreso .alert{
+    font-size: 0.7em;
+}
+
+
 @media screen and (max-width:768px){
     table tr td:nth-child(3), table tr th:nth-child(3), table tr td:nth-child(4), table tr th:nth-child(4), table tr td:nth-child(5), table tr th:nth-child(5), table tr td:nth-child(6), table tr th:nth-child(6), table tr td:nth-child(7), table tr th:nth-child(7), table tr td:nth-child(8), table tr th:nth-child(8){
         display:none;

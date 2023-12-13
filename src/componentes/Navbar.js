@@ -3,7 +3,7 @@ import '../index.css'
 
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import{faUser, faHeart, faCartShopping, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+import{/* faUser, */ faHeart, faCartShopping, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 
 export const Navbar = () =>
        <div >
@@ -57,8 +57,8 @@ export const Navbar = () =>
                         </div>
                         <div id="carrito">
                             {/* <NavLink to="#"><FontAwesomeIcon icon={faUser} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink> */}
-                            <NavLink to="/favoritos"><FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
-                            <NavLink to="/carrito"><FontAwesomeIcon icon={faCartShopping} style={{color:'#EF233C', fontSize: '20px', padding: '10px'}}></FontAwesomeIcon></NavLink>
+                            <NavLink to="/favoritos"><FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '1.2em', padding: '0.8em'}}></FontAwesomeIcon></NavLink>
+                            <NavLink to="/carrito"><FontAwesomeIcon icon={faCartShopping} style={{color:'#EF233C', fontSize: '1.2em', padding: '0.8em'}}></FontAwesomeIcon></NavLink>
                         </div>
                     </div>
                 </div>

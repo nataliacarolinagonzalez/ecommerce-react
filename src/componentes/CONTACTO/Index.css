@@ -6,6 +6,10 @@
     padding: 1em 5em;
    /*  margin-top: 6em; */ 
 }
+.Contacto .alert{
+    font-size: 0.7em;
+}
+
 
 .Contacto h1 {
     color: #0B3954;

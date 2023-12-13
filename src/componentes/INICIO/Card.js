@@ -34,7 +34,7 @@ export const Card = props => {
                 
             <section>
                 <img src={producto.foto} alt="" />
-                <p style={{fontVariant:"small-caps"}}>{producto.categoria}</p>
+                <p style={{fontVariant:"small-caps", paddingTop: '0.7em'}}>{producto.categoria}</p>
                 <p className="nombre"><b>{producto.nombre}</b></p>
                 <p>{producto.detalles}</p>
                 <p className="precio">${producto.precio}</p>
@@ -42,12 +42,12 @@ export const Card = props => {
                 <p><b>Marca: </b>{producto.marca}</p> */}               
                 {/*  <p><b style={{color:'gold'}}>Envío: </b>{producto.envio? 'Si' : 'No'}</p> */}
                 <div id='botones'>
-                <button id='cart' onClick={
-                    () => {agregarCarritoID(producto.id); handleShow()}
-                }><FontAwesomeIcon icon={faCartShopping} style={{color:'#EF233C', fontSize: '20px', paddingLeft: '10px'}}></FontAwesomeIcon></button>
                 <button id='fav' onClick={
                     () => {agregarFavoritosID(producto.id);toggleMenu()}
-                }> {menuSelect ? <FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '20px', paddingLeft: '10px'}} ></FontAwesomeIcon> : <FontAwesomeIcon icon={farFaHeart} style={{color:'#EF233C', fontSize: '20px', paddingLeft: '10px'}}></FontAwesomeIcon>}</button>
+                }> {menuSelect ? <FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '1em', padding: '0.7em'}} ></FontAwesomeIcon> : <FontAwesomeIcon icon={farFaHeart} style={{color:'#EF233C', fontSize: '1em', padding: '0.7em'}}></FontAwesomeIcon>}</button>
+                 <button id='cart' onClick={
+                    () => {agregarCarritoID(producto.id); handleShow()}
+                }><FontAwesomeIcon icon={faCartShopping} style={{color:'#EF233C', fontSize: '1em', padding: '0.7em'}}></FontAwesomeIcon></button>
                 </div>
             </section>
         </div>

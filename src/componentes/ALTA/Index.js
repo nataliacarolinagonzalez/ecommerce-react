@@ -83,44 +83,70 @@ export function Index(props) {
     function formInvalid() {
         const p = producto
         const noValido =
-            //!p.nombre ||
-            !/^[a-zA-Z ]{3,15}$/.test(p.nombre) ||
-            !/^[1-9]{3,10}$/.test(p.precio) ||
+            /* !p.nombre ||
+            !p.precio ||
+            !p.stock ||
+            !p.marca ||
+            !p.categoria ||
+            !p.detalles ||
+            !p.foto */
+
+
+
+            !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(p.nombre) ||
+            !/^[0-9]{3,10}$/.test(p.precio) ||
             !/^\d{1,10}$/.test(p.stock) ||
-            !/^[a-zA-Z ]{3,15}$/.test(p.marca) ||
-            !/^[a-zA-Z ]{3,15}$/.test(p.categoria) ||
-            !/^[a-zA-Z ]{3,30}$/.test(p.detalles) ||
+            !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{1,50}$/.test(p.marca) ||
+            !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(p.categoria) ||
+            !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(p.detalles) ||
             !p.foto
 
-            /* const noValidoNombre =!/^[a-zA-Z ]{3,15}$/.test(p.nombre) */
+        /* const noValido = 
+            !noValidoNombre   */    
 
-            //Faltan las alertas en cada input
-             
-            /* !/^[1-9]{3,10}$/.test(p.precio) ||
-            !/^\d{1,10}$/.test(p.stock) ||
-            !/^[a-zA-Z ]{3,15}$/.test(p.marca) ||
-            !/^[a-zA-Z ]{3,15}$/.test(p.categoria) ||
-            !/^[a-zA-Z ]{3,30}$/.test(p.detalles) ||
-            !p.foto */
-            
-            /* if(noValidoNombre){
-                console.log("error")
-                
-            }else{
-                console.log("ok!")
-                
-            } */
+        
 
-       /*  let isError = false
-        let errors = {}
-
-        if(!p.nombre.trim()){
-            errors.nombre = "Debe completar el nombre del producto"
-            isError = true
-        }
-        return isError ? errors : null */
-        return noValido 
+        return noValido          
+        
     }
+
+    function validarNombre(){
+        const p = producto
+        const noValidoNombre =!/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(p.nombre)
+        return noValidoNombre
+    }
+    
+    function validarMarca(){
+        const p = producto
+        const noValidoMarca =!/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(p.marca)
+        return noValidoMarca
+    }
+    function validarCategoria(){
+        const p = producto
+        const noValidoCategoria =!/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(p.categoria)
+        return noValidoCategoria
+    }
+    function validarDetalles(){
+        const p = producto
+        const noValidoDetalles =!/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(p.detalles)
+        return noValidoDetalles
+    }
+
+    function validarPrecio(){
+        const p = producto
+        const noValidoPrecio =!/^[0-9]{3,10}$/.test(p.precio)
+        return noValidoPrecio
+    }
+
+    function validarStock(){
+        const p = producto
+        const noValidoStock =!/^\d{1,10}$/.test(p.stock)
+        return noValidoStock
+    }
+
+
+
+
 
     // --------------------------------------------------
     //    Incorporación / actualización de un producto
@@ -232,6 +258,13 @@ export function Index(props) {
                     onSubmit={onSubmit}
                     editarID={editarID}
                     invalid={formInvalid()}
+                    nombreInvalid={validarNombre()}
+                    marcaInvalid = {validarMarca()}
+                    precioInvalid = {validarPrecio()}
+                    stockInvalid = {validarStock()}
+                    categoriaInvalid = {validarCategoria()}
+                    detallesInvalid = {validarDetalles()}
+
                 />
 
                 <Tabla

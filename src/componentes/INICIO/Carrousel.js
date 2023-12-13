@@ -19,7 +19,7 @@ export const Carrousel = () =>{
             <img src="https://dcdn.mitiendanube.com/stores/001/119/073/products/whatsapp-image-2020-03-02-at-17-57-271-e720b0ecd1162d3dbc15832413671737-480-0.jpeg" className="d-block w-50" height={200}/>
           </div>
           <div className="carousel-item" data-interval="1000">
-            <img src="https://dcdn.mitiendanube.com/stores/001/119/073/products/whatsapp-image-2020-03-03-at-15-25-551-9707199c9beb1f791715832628295569-480-0.jpeg" className="d-block w-50"  height={200}/>
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_948321-MLU70339176789_072023-F.webp" className="d-block w-50"  height={200}/>
           </div>
           <div className="carousel-item" data-interval="1000">
             <img src="https://dcdn.mitiendanube.com/stores/001/119/073/products/img-20230906-wa00481-cd494861f5be5240a916940046470917-480-0.jpg" className="d-block w-50"  height={200}/>
@@ -31,7 +31,7 @@ export const Carrousel = () =>{
             <img src="https://libreriaslevalle.com/15503-home_default/lapices-de-colores-pastel-tentacion-x20-unidades-mooving.jpg" className="d-block w-50"  height={200}/>
           </div>
           <div className="carousel-item" data-interval="1000">
-            <img src="https://dcdn.mitiendanube.com/stores/001/119/073/products/20200308_1747591-41be75170c1c59d5af15838837824208-480-0.webp" className="d-block w-50"  height={200}/>
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_672186-MLA31010749496_062019-F.webp" className="d-block w-50"  height={200}/>
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
