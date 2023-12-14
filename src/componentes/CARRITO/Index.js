@@ -1,5 +1,6 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
+import Modal from 'react-bootstrap/Modal';
 import './Index.css'
 
 import { Tabla } from './Tabla'
@@ -11,6 +12,8 @@ export function Index(props) {
 
     const [carrito, setCarrito] = useLocalStorage('carrito', [])
 
+
+    
     useEffect(() => {
         console.log('Componente Index Carrito (montado)')
 
@@ -57,28 +60,44 @@ export function Index(props) {
         setCarrito([])
     }
 
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     function subtotal__carrito (cantidad, precio){
         let subtotal = cantidad*precio
-        let total =+ subtotal
-        return subtotal, total
+        return subtotal
     }
 
-   /*  function total__carrito (){
-        let subtotal = cantidad*precio
-        return subtotal
-    } */
+    function total__carrito (){
+        let total = 0
+        carrito.forEach(p => {
+            total+=p.precio*p.cantidad
+        })
+        return total
+    }
 
     return (
         <div className="Carrito">
             <div>
                 {/* <h3>Componente {enunciado}</h3>
                 <hr /> */}
+                <Modal className='text-dark' show={show} onHide={handleClose}>
+           {/*  <Modal.Header closeButton>
+                <Modal.Title></Modal.Title>
+            </Modal.Header> */}
+            <Modal.Body>
+                Su pedido ha sido enviado. Recibirá un mail con todos los datos. Gracias por su compra!
+            </Modal.Body>
+            {/* <Modal.Footer></Modal.Footer> */}
+          </Modal>
 
                 <div className="carrito">
                     <h1>- Carrito de compras -</h1>
                     <br /><br />
 
-                    {carrito.length === 0 && <h3 className='alert alert-danger'>No se encontraron pedidos</h3>}
+                    {carrito.length === 0 && <h6 className='alert alert-dark' style={{width:'50%'}}>El carrito está vacio</h6>}
                     {carrito.length > 0 &&
                         <>
                             <Tabla 
@@ -87,12 +106,13 @@ export function Index(props) {
                                 incrementarCantID={incrementarCantID}
                                 decrementarCantID={decrementarCantID}
                                 subtotal__carrito={subtotal__carrito}
+                                total__carrito={total__carrito}
+                                
                             />
                             <div id='pie-button'>
-                                <button className="carrito__pedir" onClick={pedir}>Pedir</button>
-                                <button className="carrito__borrar ml-3" onClick={borrarAll}>Borrar</button>
-                                {/* <p className="subtotal__carrito ml-3" subtotal__carrito={subtotal__carrito}>{total} </p> */}
-
+                                <button className="carrito__pedir" onClick={
+                                    () => {handleShow(); pedir()}}>Pedir</button>
+                                <button className="carrito__borrar ml-3" onClick={borrarAll}>Vaciar Carrito</button>
 
                             </div>
                         </>

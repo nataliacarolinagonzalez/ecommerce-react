@@ -3,8 +3,10 @@
 .Contacto{
     height: 100%;
     text-align: center;
-    padding: 1em 5em;
+   /*  padding: 1em 5em; */
    /*  margin-top: 6em; */ 
+   width: 50%;
+
 }
 .Contacto .alert{
     font-size: 0.7em;
@@ -22,13 +24,12 @@
 }
  #como-llegar{
     border: 2px solid black;
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
-/* FORM */
 #formulario{
-    width: 50%;
+    width: 100%;
     margin-bottom: 10em;
     padding: 0;
     text-align: center;
@@ -79,14 +80,14 @@
     display: inline;
 }
 
-
    
 #formulario input, #formulario textarea {
     width: 100%;
     border-radius: 0.3em;
     border: 1px solid #0B3954;
-    padding: 0.6em;
+    padding: 1em;
     margin-bottom: 1.3em;
+    font-size: 0.7em;
 } 
  #formulario label{
     display: block;

@@ -50,7 +50,7 @@ export function Index(props) {
                     <h1>- Productos favoritos -</h1>
                     <br /><br />
 
-                    {favoritos.length === 0 && <h3 className='alert alert-danger'>No se encontraron pedidos</h3>}
+                    {favoritos.length === 0 && <h6 className='alert alert-dark' style={{width:'50%'}}>No tenés productos favoritos</h6>}
                     {favoritos.length > 0 &&
                         <>
                             <TablaFavoritos 

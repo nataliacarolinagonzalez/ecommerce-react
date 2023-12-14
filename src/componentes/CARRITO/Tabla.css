@@ -1,17 +1,27 @@
 .TablaCarrito table{
-    width: 70%;
+    width: 85%;
 }
 
 .TablaCarrito table tr td {
-     border-top: 1px solid #0B3954;
-     padding: 1em;
-     font-weight: bold; 
-     font-size: 0.8em;
-     color: #0B3954; 
-     letter-spacing: 0.1em;
+    border-top: 1px solid #0B3954;
+    padding: 1em;
+    font-weight: bold; 
+    font-size: 0.8em;
+    color: #0B3954; 
+    letter-spacing: 0.1em;
 
- }
-
+}
+.sin-borde{
+    border: none;
+}
+.total{
+    border-top: 2px solid #0B3954;
+    padding: 1em;
+    font-weight: bold; 
+    font-size: 0.9em;
+    color: #ec5151; 
+    letter-spacing: 0.1em;
+}
  .TablaCarrito table tr td img{
     width: 80px;
 
@@ -19,18 +29,16 @@
 
 .TablaCarrito .btn-borrar, .TablaCarrito .btn-inc, .TablaCarrito .btn-dec{
     color: #0B3954;
-    padding: 1em;
+   /*  padding: 1em; */
     font-weight: bold; 
     font-size: 1em;
-    letter-spacing: 0.1em;
+   /*  letter-spacing: 0.1em; */
     outline: none;
     border: none;
     background-color: transparent;
 }
 .TablaCarrito .btn-inc, .TablaCarrito .btn-dec{
-    font-size: 1.2em;
-    padding: 0
-    
+    font-size: 1.2em;    
 }
 
 .TablaCarrito .btn-borrar:hover, .TablaCarrito .btn-inc:hover, .TablaCarrito .btn-dec:hover{

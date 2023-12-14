@@ -13,15 +13,16 @@ footer #info-gral-footer{
 }
 footer #info-gral-footer .info, footer #info-gral-footer .contacto, footer #info-gral-footer .suscripcion{
     margin: 1em;
-    padding: 0;
+    padding: 0.5em;
     line-height: 1.3em;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 footer .copy{
     text-align: center;
     color: black;
     margin-bottom: 1em;
-
+    font-weight: bold;
+    font-size: 0.7em;
 }
 footer #info-gral-footer .info h4, footer #info-gral-footer .contacto h4, footer #info-gral-footer .suscripcion h4, footer #info-gral-footer .redes h4 {
     margin-bottom: 0.5em;
@@ -36,9 +37,11 @@ footer #info-gral-footer .info a, footer #info-gral-footer .contacto a {
 }
 footer #info-gral-footer .contacto li{
     list-style-type: none;  
+    margin-bottom: 0.7em;
 }
 footer #info-gral-footer .info li {
-    list-style-type: '>  ';  
+    list-style-type: '>  '; 
+    margin-bottom: 0.7em; 
 }
 footer #info-gral-footer .info li::marker{
     font-size: 0.6em;

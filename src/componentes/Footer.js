@@ -40,7 +40,7 @@ export const Footer = () => {
                     </div>
                 </div> 
                 <div className="copy">
-                    <h6>© 2023 CG.</h6>
+                    <p>© 2023 CG.</p>
                 </div>   
             </footer>
             <div className="btn-whatsapp">

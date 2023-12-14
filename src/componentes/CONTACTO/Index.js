@@ -11,7 +11,7 @@ export function Index(props) {
         nombre: '',
         tel: '',
         email: '',
-        acercaDe: '',
+        comentario: '',
         condiciones: ''
     })
     
@@ -37,8 +37,8 @@ export function Index(props) {
             !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(f.nombre) ||
             !/^\d{10}$/.test(f.tel) ||
             !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email) ||
-            !f.comentario 
-            /* !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{30,350}$/.test(f.comentario)  */
+            /* !f.comentario */ 
+            !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ?¿!¡,;.-_]{30,350}$/.test(f.comentario)
             
             return formNoValido
         
@@ -60,11 +60,11 @@ export function Index(props) {
         const noValidoTel =!/^\d{10}$/.test(f.tel) 
         return noValidoTel
     }
-    /* function validarComentario(){
+    function validarComentario(){
         const f = form
-        const noValidoComentario =!/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,350}$/.test(f.comentario)
+        const noValidoComentario =!/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ?¿!¡,;.-_]{30,350}$/.test(f.comentario)
         return noValidoComentario
-    } */
+    }
 
     return (
         <div className="Contacto">
@@ -83,7 +83,7 @@ export function Index(props) {
                         nombreInvalid={validarNombre()}
                         emailInvalid = {validarEmail()}
                         telInvalid = {validarTel()}
-                        /* comentarioInvalid = {validarComentario()} */
+                        comentarioInvalid = {validarComentario()}
                     
                 
                 />

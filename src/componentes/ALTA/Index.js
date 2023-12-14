@@ -266,6 +266,9 @@ export function Index(props) {
                     detallesInvalid = {validarDetalles()}
 
                 />
+                <hr/>
+                <h2>Listado de productos disponibles</h2>
+
 
                 <Tabla
                     productos={productos}

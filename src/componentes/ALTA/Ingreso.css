@@ -7,12 +7,12 @@
     border-radius: 0.5em;
     border: solid 2px #0B3954;
     width: 50%;
-    margin-bottom: 5em; 
-    
+    margin-bottom: 3em;   
 }
 .Ingreso p{
     font-size: smaller;
 }
+
 .Ingreso legend{
     background-color:#0B3954;
     margin-bottom: 2em;
@@ -29,8 +29,9 @@
     width: 100%;
     border-radius: 0.3em;
     border: 1px solid #0B3954;
-    padding: 0.6em;
+    padding: 1em;
     margin-bottom: 1.3em;
+    font-size: 1em;
 } 
  .Ingreso label{
     display: block;
@@ -84,7 +85,7 @@
 .Ingreso input:valid{
     box-shadow: 3px 2px 5px #0B3954;}
 
-.Ingreso .alert{
+.Ingreso .alert, .Ingreso .legenda{
     font-size: 0.7em;
 }
 

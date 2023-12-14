@@ -2,7 +2,7 @@ import './Index.css'
 
 export function Form(props) {
     const { nombre, tel, email, comentario, condiciones } = props.form
-    const { onChange, invalid, nombreInvalid, telInvalid, emailInvalid/* , comentarioInvalid  */} = props
+    const { onChange, invalid, nombreInvalid, telInvalid, emailInvalid, comentarioInvalid } = props
     return (
         <div className="Form">
             <div id="formulario">
@@ -24,10 +24,10 @@ export function Form(props) {
                             {emailInvalid?"Ingrese un email válido. ":"OK"}
                         </div>
                         <label htmlFor="comentario">Comentarios</label>
-                        <textarea name="comentario" className='mb-0' id="comentarios" cols="20" rows="10" placeholder="Escribí tu consulta" value={comentario} onChange={onChange}></textarea>
-                       {/*  <div className="alert alert-dark p-1" role="alert">
-                            {comentarioInvalid?"Ingrese un email válido. ":"OK"}
-                        </div> */}   
+                        <textarea name="comentario" className='mb-0' id="comentario" cols="20" rows="10" placeholder="Escribí tu consulta" value={comentario} onChange={onChange}></textarea>
+                        <div className="alert alert-transparent p-0" role="alert">
+                            {comentarioInvalid?"Ingrese su consulta. Máximo 350 caractéres. ":"OK. Máximo 350 caractéres"}
+                        </div>  
                         <input className="pie-input" id="condiciones" name="condiciones" value="acepta" type="checkbox" checked={condiciones} onChange={onChange} />
                         <label className="pie-input ml-2" htmlFor="condiciones">Acepto las condiciones*</label>
                         <p>*: campo obligatorio.</p>

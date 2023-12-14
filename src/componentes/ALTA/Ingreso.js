@@ -76,7 +76,7 @@ export default function Ingreso(props) {
                     <input type="checkbox" id="envio" className="form-check-input mb-0" checked={envio} onChange={onChange} />
                     <label htmlFor="envio">envio*</label>
                 </div>
-                <p>* campo obligatorio.</p>
+                <p className='legenda'>* campo obligatorio.</p>
 
                 {/* ----- botón de envío ------ */}
                 <div id="pie-button">
