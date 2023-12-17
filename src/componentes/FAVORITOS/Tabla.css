@@ -36,19 +36,16 @@
 @media screen and (max-width: 380px){
     .TablaFavoritos{
         width: 90%;
-        margin-bottom: 2em;  
+       /*  margin-bottom: 2em;  */ 
     }
     .favoritos h1{
         font-size: 1em;
         margin-top: 6em;
     }
-    .TablaFavoritos table tr td:nth-child(3), .TablaFavoritos table tr th:nth-child(3), .TablaFavoritos table tr td:nth-child(4), .TablaFavoritos table tr th:nth-child(4), .TablaFavoritos table tr td:nth-child(1), .TablaFavoritos table tr th:nth-child(1) {
-        display:none;
-    }
     table{
-        margin-bottom: 10em;
         font-size: small;
-    }
+        margin-bottom: 2em;
+    } 
     .TablaFavoritos .btn-borrar{
         padding: 0.5em;
         font-size: 0.5em;
@@ -67,11 +64,9 @@
         font-size: 1.2em;
         margin-top: 6em;
     }
-    .TablaFavoritos table tr td:nth-child(3), .TablaFavoritos table tr th:nth-child(3), .TablaFavoritos table tr td:nth-child(4), .TablaFavoritos table tr th:nth-child(4) {
-        display:none;
-    }
+   
     table{
-        margin-bottom: 15em;
+        margin-bottom: 3em;
         font-size: small;
     }
     
@@ -84,11 +79,9 @@
         font-size: 1.3em;
         margin-top: 7em;
     }
-    .TablaFavoritos table tr td:nth-child(3), .TablaFavoritos table tr th:nth-child(3), .TablaFavoritos table tr td:nth-child(4), .TablaFavoritos table tr th:nth-child(4) {
-        display:none;
-    }
+    
     table{
-        margin-bottom: 8em;
+        margin-bottom: 3em;
         font-size: small;
     }
     
