@@ -15,6 +15,7 @@ export function Index(props) {
     const [carrito, setCarrito] = useLocalStorage('carrito', [])
     const [favoritos, setFavoritos] = useLocalStorage('favoritos', [])
     
+    
     useEffect(() => {
         console.log('Componente Index Inicio (montado)')
 

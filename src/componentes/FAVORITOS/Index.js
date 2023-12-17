@@ -58,7 +58,7 @@ export function Index(props) {
                                 borrarIDFavoritos={borrarIDFavoritos}
                             />
                             <div id='pie-button'>
-                                <button className="favoritos__pedir"  onClick={pedirFavoritos}>Pedir</button>
+                                {/* <button className="favoritos__pedir"  onClick={pedirFavoritos}>Pedir</button> */}
                                 <button   className="favoritos__borrar ml-3" onClick={borrarAllFavoritos}>Borrar</button>
                             </div>
                         </>

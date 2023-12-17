@@ -7,10 +7,9 @@ export const Tabla = props => {
     //console.log(productos)
 
     return (
-        <div className="TablaCarrito">
-
-            <div className="table-responsive">
-                <table >
+        <div className="">
+            <div className=" TablaCarrito table-responsive">
+                <table className="table">
                    {/*  <thead>
                         <tr>
                             <th>#</th>

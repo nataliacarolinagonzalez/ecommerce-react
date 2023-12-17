@@ -9,8 +9,10 @@ import Modal from 'react-bootstrap/Modal';
 
 export const Card = props => {
 
-    const { producto, agregarCarritoID, agregarFavoritosID, isFav } = props
+    const {producto, agregarCarritoID, agregarFavoritosID } = props
     const [menuSelect, setMenuSelect] = useState(false);
+    
+
 
     const toggleMenu = () => setMenuSelect(prevState => !prevState);
 
@@ -18,19 +20,24 @@ export const Card = props => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const [btn, setBtn] = useState(false);
+    const btnCarrito = () => setBtn(false);
+    const btnFav = () => setBtn(true);
+    
+    
     return (
         <div className="Card">
 
 
-          <Modal className='text-dark' show={show} isfav={isFav} onHide={handleClose}>
-           {/*  <Modal.Header closeButton>
-                <Modal.Title></Modal.Title>
-            </Modal.Header> */}
-            <Modal.Body>
-                Producto agregado al carrito
-            </Modal.Body>
-            {/* <Modal.Footer></Modal.Footer> */}
-          </Modal>
+            <Modal className='text-dark' show={show} onHide={handleClose}>
+                {/*  <Modal.Header closeButton>
+                     <Modal.Title></Modal.Title>
+                </Modal.Header> */}
+                <Modal.Body>
+                    {btn?"Producto agregado a favoritos":"Producto agregado al carrito "}                    
+                </Modal.Body>
+                {/* <Modal.Footer></Modal.Footer> */}
+            </Modal>
                 
             <section>
                 <img src={producto.foto} alt="" />
@@ -43,11 +50,11 @@ export const Card = props => {
                 {/*  <p><b style={{color:'gold'}}>Envío: </b>{producto.envio? 'Si' : 'No'}</p> */}
                 <div id='botones'>
                 <button id='fav' onClick={
-                    () => {agregarFavoritosID(producto.id);toggleMenu()}
-                }> {menuSelect ? <FontAwesomeIcon icon={faHeart} style={{color:'#EF233C', fontSize: '1em', padding: '0.7em'}} ></FontAwesomeIcon> : <FontAwesomeIcon icon={farFaHeart} style={{color:'#EF233C', fontSize: '1em', padding: '0.7em'}}></FontAwesomeIcon>}</button>
-                 <button id='cart' onClick={
-                    () => {agregarCarritoID(producto.id); handleShow()}
-                }><FontAwesomeIcon icon={faCartShopping} style={{color:'#EF233C', fontSize: '1em', padding: '0.7em'}}></FontAwesomeIcon></button>
+                    () => {agregarFavoritosID(producto.id);toggleMenu(); handleShow(); btnFav()}
+                }> {menuSelect ? <FontAwesomeIcon className='iconos' icon={faHeart} style={{color:'#EF233C', fontSize: '1em', padding: '0.7em'}} ></FontAwesomeIcon> : <FontAwesomeIcon className='iconos' icon={farFaHeart} /* style={{color:'#EF233C', fontSize: '1em', padding: '0.7em'}} */></FontAwesomeIcon>}</button>
+                <button id='cart' onClick={
+                    () => {agregarCarritoID(producto.id); handleShow(); btnCarrito()}
+                }><FontAwesomeIcon className='iconos' icon={faCartShopping} /* style={{color:'#EF233C', fontSize: '1em', padding: '0.7em'}} */></FontAwesomeIcon></button>
                 </div>
             </section>
         </div>

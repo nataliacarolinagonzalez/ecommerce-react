@@ -15,7 +15,17 @@ export function Index(props) {
         condiciones: ''
     })
     
-
+    
+    function borrarForm() {
+        setForm({
+            nombre: '',
+            tel: '',
+            email: '',
+            comentario: '',
+            condiciones: ''
+        })
+    }
+    
     useEffect(() => {
         console.log('Componente Index Contacto (montado)')
         
@@ -38,7 +48,7 @@ export function Index(props) {
             !/^\d{10}$/.test(f.tel) ||
             !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email) ||
             /* !f.comentario */ 
-            !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ?¿!¡,;.-_]{30,350}$/.test(f.comentario)
+            !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ?¿!¡,;.-_]{3,350}$/.test(f.comentario)
             
             return formNoValido
         
@@ -62,7 +72,7 @@ export function Index(props) {
     }
     function validarComentario(){
         const f = form
-        const noValidoComentario =!/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ?¿!¡,;.-_]{30,350}$/.test(f.comentario)
+        const noValidoComentario =!/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ?¿!¡,;.-_]{3,350}$/.test(f.comentario)
         return noValidoComentario
     }
 
@@ -84,6 +94,7 @@ export function Index(props) {
                         emailInvalid = {validarEmail()}
                         telInvalid = {validarTel()}
                         comentarioInvalid = {validarComentario()}
+                        borrarForm = {borrarForm}
                     
                 
                 />

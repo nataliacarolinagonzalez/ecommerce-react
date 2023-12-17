@@ -80,10 +80,7 @@ export function Index(props) {
         })
     }
 
-    function formInvalid() {
-        const p = producto
-        const noValido =
-            /* !p.nombre ||
+    /* !p.nombre ||
             !p.precio ||
             !p.stock ||
             !p.marca ||
@@ -91,8 +88,9 @@ export function Index(props) {
             !p.detalles ||
             !p.foto */
 
-
-
+    function formInvalid() {
+        const p = producto
+        const noValido =
             !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(p.nombre) ||
             !/^[0-9]{3,10}$/.test(p.precio) ||
             !/^\d{1,10}$/.test(p.stock) ||
@@ -100,14 +98,7 @@ export function Index(props) {
             !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(p.categoria) ||
             !/^[a-zA-Z0-9\. ñáéíóúÑÁÉÍÓÚ]{3,50}$/.test(p.detalles) ||
             !p.foto
-
-        /* const noValido = 
-            !noValidoNombre   */    
-
-        
-
-        return noValido          
-        
+        return noValido              
     }
 
     function validarNombre(){
@@ -143,10 +134,6 @@ export function Index(props) {
         const noValidoStock =!/^\d{1,10}$/.test(p.stock)
         return noValidoStock
     }
-
-
-
-
 
     // --------------------------------------------------
     //    Incorporación / actualización de un producto
@@ -238,9 +225,9 @@ export function Index(props) {
                 </Button> */}
 
                 <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
+                    {/* <Modal.Header closeButton>
                         <Modal.Title>Eliminación de Producto</Modal.Title>
-                    </Modal.Header>
+                    </Modal.Header> */}
 
                     <Modal.Body>
                         ¿Desea eliminar el producto: {productos.find(p => p.id === borrarID)?.nombre}?

@@ -49,3 +49,48 @@
     font-weight: bold;
 }
 
+/* Media Queries */
+@media screen and (max-width: 380px){
+    .carousel{
+        display: none;
+    }
+    .promo-uno, .promo-dos{
+        padding: 0.4em;
+        font-size: 0.5em;
+
+    }
+    
+    .promos-carrousel, .promos{
+        margin-top: 3em;
+    }
+    
+   
+}
+@media screen and (min-width:380px) and (max-width: 512px) {
+    .carousel{
+        display: none;
+    }
+    .promo-uno, .promo-dos{
+        padding: 1em;
+        font-size: 0.8em;
+       
+    }
+    
+    .promos-carrousel, .promos{
+        margin-top: 3em;
+    }
+}
+@media screen and (min-width:512px) and (max-width: 768px) {
+    .carousel{
+        display: none;
+    }
+    .promo-uno, .promo-dos{
+        padding: 1em;
+        font-size: 0.8em;
+        
+    }
+    
+    .promos-carrousel, .promos{
+        margin-top: 5em;
+    }
+}

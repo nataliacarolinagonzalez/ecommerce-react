@@ -1,8 +1,9 @@
-.inicio {
+.Inicio {
     height: 100%;
     text-align: center;
     padding: 0; 
-    margin: 0; 
+    margin: 0 auto; 
+    width: 80%;
 }
 
 .inicio .cards-container {
@@ -16,6 +17,12 @@
     width: 14em;
     height: 14em;
     
+}
+
+.iconos{
+    color:#EF233C;
+    font-size: 1em;
+    padding: 0.7em
 }
 
 .inicio section {
@@ -88,4 +95,81 @@
   overflow: hidden;
   transition: 1.5s ease;
     
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 380px){
+    .Inicio{
+        padding-bottom: 10em;
+    }
+    .inicio .section-cards-header h1 {
+        font-size: 0.8em;
+        margin: 0.5em auto;
+        letter-spacing: 0.1em;
+    }
+    .inicio .section-cards-header {
+        margin: 0.5em auto;
+    }
+    .inicio section img {
+        width: 10em;
+        height: 10em;
+        
+    }
+    
+    .inicio section {
+        padding: 0.3em;
+        margin: 0.5em;
+        width: 11em;
+        height: 18em;
+    }
+        
+    .inicio .cards-container section p{
+        margin-bottom: 0.2em;
+        font-size: 0.5em;
+    }
+    
+    .inicio .cards-container .nombre {
+        margin-bottom: 0.2em;
+        font-size: 0.7em;
+    }
+    .inicio .cards-container .precio {
+        font-size:0.7em; 
+        font-weight:bold; 
+        color:#ec5151; 
+        margin-top:0.2em  
+    }
+    
+    .inicio .nombre {
+        font-variant:small-caps; 
+        font-size:0.5em; 
+        letter-spacing: em;
+    }
+    
+    .inicio section #fav, .inicio section #cart{
+        outline: none;
+        border: none; 
+        background-color: transparent;
+        color: #EF233C;
+        padding-bottom: 1.2em;
+        padding-top: 0.5em;
+    }
+
+    .iconos{
+        color:#EF233C;
+        font-size: 0.7em;
+        padding: 0.5em
+    }
+
+
+}
+@media screen and (min-width:380px) and (max-width: 512px) {
+    .Inicio{
+        padding-bottom: 10em;
+    }
+    .inicio .section-cards-header h1 {
+        font-size: 1.2em;
+        margin: 0.7em auto;
+        letter-spacing: 0.2em;
+    }
 }

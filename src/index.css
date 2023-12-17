@@ -22,6 +22,7 @@
 
 /* Media Queries */
 @media screen and (max-width: 380px){
+    
     .barra #logo img{
                      width: 40px;
     }

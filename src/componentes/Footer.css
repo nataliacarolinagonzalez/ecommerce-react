@@ -80,3 +80,52 @@ footer #info-gral-footer .suscripcion input[type="submit"] {
     background-color: rgba(11, 57, 84, 1);
     color: whitesmoke;
 }
+
+@media screen and (max-width: 380px){
+    
+    .btn-whatsapp img{
+        width: 3em;
+        position: fixed;
+        right: 8px;
+        bottom: 8px;
+    }
+    
+    footer #info-gral-footer{
+        flex-direction: column;
+        font-size: 0.7em;
+    }
+    footer .copy{
+        font-size: 0.5em;
+    }
+}
+@media screen and (min-width:380px) and (max-width: 512px) {
+    .btn-whatsapp img{
+        width: 4em;
+        position: fixed;
+        right: 12px;
+        bottom: 12px;
+    }
+    
+    footer #info-gral-footer{ 
+        font-size: 0.7em;
+        flex-direction: column;
+    }
+    footer .copy{
+        font-size: 0.5em;
+    }
+    
+}
+@media screen and (min-width:512px) and (max-width: 768px) {
+    .barra #logo img{
+        width: 90px;
+    }
+    header nav ul li a{
+        font-size: 1em;  
+    }
+    footer #info-gral-footer{ 
+        font-size: 0.7em;
+    }
+    footer .copy{
+        font-size: 0.5em;
+    }
+}

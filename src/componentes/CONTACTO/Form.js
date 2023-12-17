@@ -1,12 +1,19 @@
 import './Index.css'
+import { useForm } from '@formspree/react';
 
 export function Form(props) {
     const { nombre, tel, email, comentario, condiciones } = props.form
-    const { onChange, invalid, nombreInvalid, telInvalid, emailInvalid, comentarioInvalid } = props
+    const { onChange, invalid, nombreInvalid, telInvalid, emailInvalid, comentarioInvalid} = props
+
+    const [state, handleSubmit] = useForm("xkndwgvq");
+    if (state.succeeded) {
+        return  <h4 className='alert alert-dark mt-5' style={{width:'100%', fontSize:'1em'}}>Su consulta ha sido enviada. Responderemos a la brevedad.</h4>
+
+    }
     return (
         <div className="Form">
             <div id="formulario">
-                <form action="https://formspree.io/f/mvonjkay" target="_blank" method="post">
+                <form onSubmit={handleSubmit}>
                         <legend>Formulario de Contacto</legend>
                         <label htmlFor="nombre">Nombre: *</label>
                         <input id="nombre"  className='mb-0' name="nombre" type="text" value={nombre} onChange={onChange}/>
@@ -32,8 +39,7 @@ export function Form(props) {
                         <label className="pie-input ml-2" htmlFor="condiciones">Acepto las condiciones*</label>
                         <p>*: campo obligatorio.</p>
                         <div id="pie-button">
-                            <button disabled={invalid}>
-                    Enviar</button>
+                            <button disabled={ () => {invalid(); state.submitting()}}>Enviar</button>
                             <button  type="reset" className="pie-input ml-3"> Restablecer</button> 
                         </div>
                 </form> 
